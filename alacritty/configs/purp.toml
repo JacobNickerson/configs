@@ -1,0 +1,45 @@
+# THEME
+[colors.primary]
+background = '0x220434'
+foreground = '0xc39fd5'
+
+[colors.normal]
+black = "#262335"
+red = "#fe4450"
+green = "#72f1b8"
+yellow = "#f3e70f"
+blue = "#03edf9"
+magenta = "#ff7edb"
+cyan = "#03edf9"
+white = "#ffffff"
+
+[colors.bright]
+black = "#614d85"
+red = "#fe4450"
+green = "#72f1b8"
+yellow = "#fede5d"
+blue = "#03edf9"
+magenta = "#ff7edb"
+cyan = "#03edf9"
+white = "#ffffff"
+
+# WINDOW SETTINGS
+[window]
+opacity = 0.85
+# below line is used for removing the bar
+#deco
+
+[window.dimensions]
+columns = 120
+lines = 30
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+# MISCELLANEOUS
+[terminal.shell]
+program = "tmux"
+
+[env]
+TERM = "tmux-256color"
