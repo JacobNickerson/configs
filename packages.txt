@@ -1,1 +1,1 @@
-nvim tmux alacritty fish fastfetch eza ttf-roboto-mono-nerd
+nvim tmux alacritty fish fastfetch eza ttf-roboto-mono-nerd libva-nvidia-driver
