@@ -1,0 +1,40 @@
+ARG=$1
+WINDOWS_PATH=$2
+
+if [ -z $ARG ]; then
+	echo "error: no command, use --help to display options"
+	exit 1
+elif [[ $ARG == "mount" ]]; then
+	if [ -z $WINDOWS_PATH ]; then
+		echo "error: no partition path specified"
+		exit 1
+	fi
+	sudo mount -t ntfs-3g $WINDOWS_PATH /mnt/windows > /dev/null 2>&1
+	if [ ! $? -eq 0 ]; then
+		echo "error: mount failed"
+		exit 1
+	else 
+		echo "Mounted partition at /mnt/windows"
+		exit 0
+	fi
+elif [[ $ARG == "unmount" ]]; then
+	sudo umount /mnt/windows
+	if [ $? -eq 0 ]; then
+		echo "Unmounted partition located at /mnt/windows"
+		exit 0
+	else
+		exit 1
+	fi
+elif [[ $ARG == "partitions" ]]; then
+	lsblk
+elif [[ $ARG == "--help" ]]; then
+	echo "commands:
+---------
+mount  <path>: Attempts to mount the specified partition at /mnt/windows
+unmount      : Unmounts the windows partition, if mounted
+partitions   : Displays the current partitions
+--help       : Displays this menu"
+else
+	echo "error: invalid command"
+	exit 1
+fi

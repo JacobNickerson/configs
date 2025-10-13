@@ -1,0 +1,72 @@
+#!/bin/bash
+
+PROJECT_NAME=$1
+DIR_NAME=$2
+
+SRC_DIR=src
+INCLUDE_DIR=include
+
+if [ -z "$PROJECT_NAME" ]; then
+	echo "Usage: project <project-name> [directory-name]"
+	exit 0
+fi
+
+if [ -z "$DIR_NAME" ]; then
+  echo "Warning: Directory name not specified, defaulting to project name"
+  DIR_NAME=$PROJECT_NAME
+fi
+
+mkdir "$DIR_NAME"
+
+if [ $? -ne 0 ]; then
+	echo "Error: Directory $DIR_NAME could not be created"
+	exit 1
+else
+	echo "Directory $DIR_NAME created successfully!"
+fi
+
+
+cp ~/.scripts/project/Makefile_template ./$DIR_NAME/Makefile
+cp ~/.scripts/project/README_template ./$DIR_NAME/README.md
+
+cd ./$DIR_NAME
+
+sed -i "s/my_project/$PROJECT_NAME/g" Makefile
+
+mkdir $SRC_DIR
+mkdir $INCLUDE_DIR
+
+echo "./bin/$PROJECT_NAME" >> main.sh
+chmod u+x main.sh
+
+echo "#pragma once
+
+class HelloWorld {
+	public:
+		HelloWorld() {}
+		void hello();
+};" >> $INCLUDE_DIR/helloworld.hpp
+
+echo "#include \"helloworld.hpp\"
+#include <iostream>
+
+void HelloWorld::hello() {
+	std::cout << \"Hello world!\" << std::endl;
+}" >> $SRC_DIR/helloworld.cpp
+
+echo "#include \"helloworld.hpp\"
+
+int main() {
+	HelloWorld helloworld;
+	helloworld.hello();
+	return 0;
+}" >> $SRC_DIR/main.cpp
+
+echo "bin/
+build/
+.*
+main.sh" >> .gitignore
+
+echo "Project \"$PROJECT_NAME\" successfully created in \"$DIR_NAME\". Run \`make\` to compile binary."
+
+exit 0
