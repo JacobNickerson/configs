@@ -135,7 +135,7 @@
 		"format": "{}",
 		"rewrite": {
 			"": "Desktop",
-			"kitty": "Terminal",
+			"alacritty": "Terminal",
 			"zsh": "Terminal",
 			"~": "Terminal"
 		},
@@ -250,7 +250,7 @@
 		],
 		"min-length": 2,
 		"max-length": 2,
-		"on-click": "kitty -e ~/.config/waybar/scripts/network.sh",
+		"on-click": "alacritty -e ~/.config/waybar/scripts/network.sh",
 		"on-click-right": "nmcli radio wifi off && notify-send 'Wi-Fi Disabled' -i 'network-wireless-off' -r 1125",
 		"tooltip-format": "Gateway: {gwaddr}",
 		"tooltip-format-ethernet": "Interface: {ifname}",
@@ -267,7 +267,7 @@
 		"format-connected": "󰂱",
 		"min-length": 2,
 		"max-length": 2,
-		"on-click": "kitty -e ~/.config/waybar/scripts/bluetooth.sh",
+		"on-click": "alacritty -e ~/.config/waybar/scripts/bluetooth.sh",
 		"on-click-right": "bluetoothctl power off && notify-send 'Bluetooth Off' -i 'network-bluetooth-inactive' -r 1925",
 		"tooltip-format": "Device Addr: {device_address}",
 		"tooltip-format-disabled": "Bluetooth Disabled",
@@ -286,7 +286,7 @@
 		"format": "{}",
 		"min-length": 2,
 		"max-length": 2,
-		"on-click": "kitty -e ~/.config/waybar/scripts/system-update.sh start"
+		"on-click": "alacritty -e ~/.config/waybar/scripts/system-update.sh start"
 	},
 
 	/*-------------------
@@ -383,7 +383,7 @@
 
 	"custom/power_menu": {
 		"format": "󰤄",
-		"on-click": "kitty -e ~/.config/waybar/scripts/power-menu.sh",
+		"on-click": "alacritty -e ~/.config/waybar/scripts/power-menu.sh",
 		"tooltip-format": "Power Menu"
 	},
 

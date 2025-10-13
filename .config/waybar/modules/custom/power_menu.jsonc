@@ -13,7 +13,7 @@
 		// "rotate":
 		// "min-length":
 		// "max-length":
-		"on-click": "kitty -e ~/.config/waybar/scripts/power-menu.sh",
+		"on-click": "alacritty -e ~/.config/waybar/scripts/power-menu.sh",
 		// "on-click-middle":
 		// "on-click-right":
 		// "on-scroll-up":
