@@ -1,6 +1,3 @@
 Setup rofi
 Setup yazi
-Setup hyprlock
 Setup hyprqt6engine and nwg-look
-Setup hypridle
-Setup mpvpaper
