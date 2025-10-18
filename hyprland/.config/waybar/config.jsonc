@@ -50,6 +50,7 @@
 		"custom/right_div#5"
 	],
 	"modules-right": [
+		"tray",
 		"mpris",
 		"custom/left_div#6",
 		"group/pulseaudio",
@@ -292,6 +293,11 @@
 	/*-------------------
 		modules-right
 	-------------------*/
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 8
+	},
 
 	"mpris": {
 		"format": "{player_icon} {title} - {artist}",
