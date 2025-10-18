@@ -1,1 +1,1 @@
-swaync hyprpolkitagent hyprqt6engine nwg-look hypridle hyprlock waybar rofi mpvpaper
+swaync hyprpolkitagent hyprqt6engine nwg-look hypridle hyprlock waybar mpvpaper hyprshot
