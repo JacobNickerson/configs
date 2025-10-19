@@ -55,9 +55,7 @@ multiplier = 3
 
 # MISCELLANEOUS
 [terminal.shell]
-#program = "fish"
 program = "tmux"
-args = ["-c", "tmux new-session"]
 
 [env]
 TERM = "tmux-256color"
