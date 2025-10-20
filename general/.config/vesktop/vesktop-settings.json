@@ -6,11 +6,11 @@
         "themeLinks": [],
         "eagerPatches": false,
         "enabledThemes": [
-            "Translucence.theme.css"
+            "modified-clearvision.css"
         ],
         "enableReactDevtools": false,
         "frameless": true,
-        "transparent": false,
+        "transparent": true,
         "winCtrlQ": false,
         "disableMinSize": false,
         "winNativeTitleBar": false,
@@ -565,7 +565,7 @@
             "authenticated": false,
             "url": "https://api.vencord.dev/",
             "settingsSync": false,
-            "settingsSyncVersion": 1760934270464
+            "settingsSyncVersion": 1760934920952
         }
     },
     "quickCss": ""
