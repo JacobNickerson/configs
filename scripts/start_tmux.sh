@@ -21,3 +21,4 @@ tmux select-layout -t $SESSION:0 tiled
 tmux split-window -h -t $SESSION:0.0 "btop"
 tmux split-window -v -t $SESSION:0.1 "neo-matrix -D --color=orange"
 tmux select-pane -t $SESSION:0 -L
+tmux send-key -t $SESSION:0 "clear; fastfetch" C-m
