@@ -1,1 +1,1 @@
-swaync hyprpolkitagent nwg-look hypridle hyprlock waybar hyprshot
+swaync hyprpolkitagent nwg-look hypridle hyprlock waybar hyprshot hyprpicker
