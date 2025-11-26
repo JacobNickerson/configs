@@ -7,6 +7,13 @@ function fish_greeting
     fastfetch
 end
 
+function fish_prompt
+    set_color e18384; echo -n (whoami)
+    set_color cyan; echo -n '@'
+    set_color e18384; echo -n (hostnamectl hostname)
+    set_color cyan; echo -n '>'(prompt_pwd)' $ '
+end
+
 # Format man pages
 set -x MANROFFOPT "-c"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
